@@ -10,6 +10,6 @@
 > Identifying elements using xpath locator.
 
 ## Further reading
-[Winium.Desktop/releases ](https://github.com/2gis/Winium.Desktop/releases )
-[Winium.Elements](https://github.com/2gis/Winium.Elements)
-[gui-inspect-tool](https://github.com/blackrosezy/gui-inspect-tool)
+- [Winium.Desktop/releases ](https://github.com/2gis/Winium.Desktop/releases)
+- [Winium.Elements](https://github.com/2gis/Winium.Elements)
+- [gui-inspect-tool](https://github.com/blackrosezy/gui-inspect-tool)
