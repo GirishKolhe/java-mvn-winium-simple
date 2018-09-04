@@ -22,21 +22,14 @@ public class test01 {
 	
 	@BeforeClass
 	public void setup() throws MalformedURLException, InterruptedException {
-		String appPath = "C:/drive/apps/flight-app/flight4a.exe";
+		String appPath = "C:/drive/apps/flight-app/flight4b.exe";
 		DesktopOptions option = new DesktopOptions();
-		System.setProperty("webdriver.winium.driver.desktop", "C:/drive/apps/webdrivers/Winium.Desktop.Driver.exe");
+		System.setProperty("webdriver.winium.driver.desktop", appPath);
 		option.setApplicationPath(appPath);
 		option.setDebugConnectToRunningApp(false);
 		//option.setLaunchDelay(2);
 		driver = new WiniumDriver(new URL("http://localhost:9999"), option);	
 		Thread.sleep(2000);
-	}
-	
-	@AfterClass
-	public void cleanUp(){
-		if (landingPage.isDisplayed()) {
-			driver.close();
-		}
 	}
 	
 	@Test
@@ -62,5 +55,12 @@ public class test01 {
 		landingPage.findElement(By.name("File")).click();
 		landingPage.findElement(By.name("Exit")).click();
 		assertFalse(landingPage.isDisplayed());
+	}
+
+	@AfterClass
+	public void cleanUp(){
+		if (landingPage.isDisplayed()) {
+			driver.close();
+		}
 	}
 }
